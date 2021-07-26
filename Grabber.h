@@ -29,6 +29,8 @@ private:
 
 	float Reach = 100.f;
 
+	
+
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
 	UInputComponent* InputComponent = nullptr;
 
@@ -37,5 +39,9 @@ private:
 	void FindPhysicsHandle();
 	void SetupInputComponent();
 
+	FVector GetEndOfRayCast() const;
+
 	FHitResult GetFirstPhysicsBodyInReach() const;
+
+	FVector GetPlayerPosition() const;
 };
